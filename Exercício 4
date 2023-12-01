@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void trocarConteudo(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+
+    int valor1, valor2;
+
+    printf("Informe um valor: ");
+    scanf("%d", &valor1);
+
+    printf("Informe um segundo valor: ");
+    scanf("%d", &valor2);
+
+    trocarConteudo(&valor1, &valor2);
+
+    printf("Valores apos a troca:\n");
+    printf("Primeiro valor: %d\n", valor1);
+    printf("Segundo valor: %d\n", valor2);
+
+    return 0;
+}
