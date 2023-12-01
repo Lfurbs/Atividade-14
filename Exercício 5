@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void trocarValores(int *a, int *b) {
+    if (*a < *b) {
+        // Troca os valores se necessario
+        int temp = *a;
+        *a = *b;
+        *b = temp;
+    }
+}
+
+int main() {
+
+    int valor1, valor2;
+
+    printf("Informe um valor: ");
+    scanf("%d", &valor1);
+
+    printf("Informe um segundo valor: ");
+    scanf("%d", &valor2);
+
+    trocarValores(&valor1, &valor2);
+
+    // Imprima os valores após a troca
+    printf("Valores depois da troca:\n");
+    printf("Maior valor: %d\n", valor1);
+    printf("Menor valor: %d\n", valor2);
+
+    return 0;
+}
